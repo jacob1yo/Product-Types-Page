@@ -1,0 +1,30 @@
+<html>
+    <head>
+    </head>
+    <body>
+        
+        <script src="Libraries/papaparse.min.js"></script>
+        <script src="Libraries/jquery-3.1.0.js"></script>
+        <script>
+            var data;
+            
+            function handleFileSelect(evt) {
+                var file = evt.target.files[0];
+            
+            Papa.parse(file, {
+                header: true,
+                dynamicTyping: true,
+                complete: function(resutls) {
+                    data = results;
+                }
+            });
+            }
+            
+            $(document).ready(function(){
+                $("#csv-file").change(handleFileSelect);
+            });
+        </script>
+        <input type="file" id="csv-file" name="files"/>
+        
+    </body>
+</html>
