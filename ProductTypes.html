@@ -1,8 +1,35 @@
-<html lang="en" ng-app>
+<html ng-app="product">
     <head>
-        <script type="text/javascript" src="angular.js"></script>
+        <title>Product Types</title>
+        <script type="text/javascript" src="Libraries/angular.min.js"></script>
+        <script type="text/javascript">
+            var app = angular.module('product', []);
+            
+            app.controller('ProductCtrl', function($scope) {
+                $scope.products = [
+                    '1  Aston Martin',
+                    '2  Bugatti',
+                    '3  Chevrolet',
+                    '4  Dodge',
+                    '5  Fiat',
+                    '6  Ford',
+                    '7  Ferrari',
+                    '8  Honda',
+                    '9  Infiniti',
+                    '10 Jaguar'
+            ];
+            });
+        </script>
     </head>
-    <body>
-        <center><u><b><h1>Product Types</h1></b></u></center>
+    <body ng-controller="ProductCtrl">
+        <h1 class="page-title">Product Types</h1>
+        <div class="row feed">
+            <div class="col-md-8">
+                <h3 ng-repeat="product in products">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    {{ product }}
+                </h3>
+            </div>
+        </div>
     </body>
 </html>
