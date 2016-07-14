@@ -7,29 +7,32 @@
             
             app.controller('ProductCtrl', function($scope) {
                 $scope.products = [
-                    '1  Aston Martin',
-                    '2  Bugatti',
-                    '3  Chevrolet',
-                    '4  Dodge',
-                    '5  Fiat',
-                    '6  Ford',
-                    '7  Ferrari',
-                    '8  Honda',
-                    '9  Infiniti',
-                    '10 Jaguar'
+                    'ID - Products',
+                    '1 - Aston Martin',
+                    '2 - Bugatti',
+                    '3 - Chevrolet',
+                    '4 - Dodge',
+                    '5 - Fiat',
+                    '6 - Ford',
+                    '7 - Ferrari',
+                    '8 - Honda',
+                    '9 - Infiniti',
+                    '10 - Jaguar'
             ];
             });
         </script>
     </head>
     <body ng-controller="ProductCtrl">
-        <h1 class="page-title">Product Types</h1>
-        <div class="row feed">
-            <div class="col-md-8">
-                <h3 ng-repeat="product in products">
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                    {{ product }}
-                </h3>
+        <center>
+            <h1 class="page-title"><center><u><b>Product Types</u></b></center></h1>
+            <div class="row feed">
+                <div class="col-md-8">
+                    <h3 ng-repeat="product in products">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                        {{ product }}
+                    </h3>
+                </div>
             </div>
-        </div>
+        </center>
     </body>
 </html>
