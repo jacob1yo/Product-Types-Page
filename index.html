@@ -1,28 +1,15 @@
 <!DOCTYPE html>
-<html ng-app>
-    
-    
-    <head>
+<html>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="ctrl.js"></script>
+
+    <body ng-app="myApp" ng-controller="myCtrl">
         
-        <title>Product Types</title>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-        <script src="Controller.js"></script>
-        
-    </head>
-    
-    
-    <body>
-        
-        <div>ID - Product Types</div>
-        <div ng-app="myApp" ng-controller="ContactController">
-            <tr ng-repeat="contact in controller">
-                {{ contact }}
-            </tr>
-        </div>
-        
-        <script>console.log('Index')</script>
+        <div><center><u><b>ID - Product Types</b></u></center></div>
+
+        <h3 ng-repeat="x in records">
+            <center>{{x}}</center>
+        </h3>
         
     </body>
-    
-    
 </html>
