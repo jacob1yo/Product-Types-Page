@@ -1,4 +1,4 @@
 var app = angular.module("myApp", []);
 app.controller("myCtrl", function($scope) {
-    $scope.records = ["1 - A", "2 - B", "3 - C", "4 - D", "5 - E", "6 - E", "7 - E", "8 - E", "9 - F", "10 - G"]
+    $scope.records = ["1 - Product A", "2 - Product B", "3 - Product C", "4 - Product D", "5 - Product E", "6 - Product E", "7 - Product E", "8 - Product E", "9 - Product F", "10 - Product G"]
 });
